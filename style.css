@@ -1,0 +1,827 @@
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+:root{
+    --color-1: #f3cd80be;
+    --color-3: #92ccb6;
+    --color-4: #bd709f;
+    --color-5: #fd97b996;
+    --font-1:"Zain", sans-serif;
+    --standard-size:40px;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/*estilos para cabercera*/
+#cabecera{
+    display: flex;
+    height: 12vh;
+    padding: 10px;
+    border: 5px solid #8f003049;
+    background-color: var(--color-5);
+
+}
+#cabecera > h2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: var(--font-1);
+    font-size: 2.6rem;
+    margin-left: 50px;
+    margin-right: 30%;
+    color:#8f003096;
+}
+#cabecera > #icab{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30%;
+    font-size: var(--standard-size);
+    color:#8f003096;
+}
+#iconcab > a{
+    text-decoration: none; 
+    color:#8f003096;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#iconcab > a:hover {
+    transform: translateY(-5px);
+    color: #8f0030;
+}
+#cabecera > #iconcab{
+    display: flex;
+    align-items: center;
+    font-size: var(--standard-size);
+    gap: var(--standard-size);
+    color:#8f003096;
+}
+
+/*estilos para hero*/
+#hero{
+    display: flex;
+    height: 88vh;
+    border: 5px solid #b47f1669 ;
+    background-color: var(--color-1);
+}
+#hero > img{
+    width: 40%;
+    margin: 20px 80px;
+    border-radius: 30px;
+}
+#herotext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+#herotext > h1{
+    font-family: var(--font-1);
+    font-size: 5rem;
+    color:#b47f16;
+    margin-right:var(--standard-size) ;
+    text-align: center;
+}
+#herotext > p{
+    font-family: var(--font-1);
+    font-size: 1.8rem;
+    color:#332407;
+    margin: 20px 70px 20px 20px;
+    text-align: center;
+}
+
+/*media queries para resposive cabecera y hero*/
+@media screen and (max-width: 1170px) {
+#cabecera {
+    height: auto;
+    padding: 15px 10px;
+    flex-wrap: wrap;
+}
+#cabecera > h2 {
+    font-size: 32px;
+    margin-left: 10px;
+    order: 1;
+    flex: 1;
+}
+#cabecera > #icab {
+    position: static;
+    transform: none;
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    font-size: 35px;
+}
+#cabecera > #iconcab {
+    order: 2;
+    font-size: 30px;
+    gap: 20px;
+    margin-right: 10px;
+}
+#hero {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+}
+#hero > img {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+#herotext > h1 {
+    font-size: 50px;
+    margin: 0 15px;
+}
+#herotext > p {
+    font-size: 20px;
+    margin: 0 15px 15px;
+}
+}
+@media screen and (max-width: 600px) {
+#cabecera > h2 {
+    font-size: 28px;
+}
+#cabecera > #iconcab {
+    font-size: 25px;
+    gap: 15px;
+}
+#herotext > h1 {
+    font-size: 40px;
+}
+#herotext > p {
+    font-size: 18px;
+}
+}
+
+/* estilos de la seccion de proyectos*/
+#proyectos {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #92ccb67c;
+    min-height: 100vh; 
+}
+#proyectos > h3 {
+    font-size: 2.5rem;
+    font-family: var(--font-1);
+    text-align: center;
+    color: #3d554c;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: var(--color-3);
+    border-radius: 30px;
+}
+.prydiv {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #e0f8ef;
+    border-radius: 30px;
+    max-width: 1200px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.prydiv:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+#phs, #pgal {
+    flex-direction: row-reverse;
+}
+.proyecto-content {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+.proyecto-content p {
+    font-family: var(--font-1);
+    color: #25332e;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.proyecto-content a {
+    text-decoration: none;
+    font-family: var(--font-1);
+    color: #1bb489;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 12px 25px;
+    border: 2px solid #1bb489;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+.proyecto-content a:hover {
+    background-color: #1bb489;
+    color: white;
+    transform: scale(1.05);
+}
+.prydiv img {
+    flex: 1;
+    border-radius: 20px;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+.prydiv:hover img {
+    transform: scale(1.03);
+}
+
+/* media queries para responsive de proyectos*/
+@media (max-width: 1000px) {
+
+.prydiv {
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 25px;
+}    
+#phs, #pgal {
+    flex-direction: column;
+}
+.proyecto-content {
+    max-width: 100%;
+}
+.proyecto-content p {
+    font-size: 1.5rem;
+}
+.proyecto-content a {
+     font-size: 1.1rem;
+     padding: 10px 20px;
+}   
+.prydiv img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+}
+@media (max-width: 600px) {
+
+#proyectos > h3 {
+    font-size: 2rem;
+    padding: 15px;
+}   
+.proyecto-content p {
+    font-size: 1.3rem;
+}
+.proyecto-content a {
+    font-size: 1rem;
+}
+}
+
+/*estilos para facetas*/
+#facetas {
+    width: 100%;
+    padding: 40px 20px;
+    background-color:var(--color-4);
+    min-height: 100vh;
+    border: 5px solid #6e164c41; 
+}
+#facetas > h3 {
+    font-size: 2.5rem;
+    font-family: var(--font-1);
+    text-align: center;
+    color: #6e164c;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #eca3cfc9;
+   border-radius: 30px;
+}
+#div-face{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: space-around;
+}
+.fa-div {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #eca3cfc9;
+    border-radius: 30px;
+    width: 600px;
+    max-width: 1200px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.fa-div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.facetas-content {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+.facetas-content p {
+    font-family: var(--font-1);
+    color: #310621;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.fa-div img {
+    flex: 1;
+    border-radius: 20px;
+    width: 500px;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+.fa-div:hover img {
+    transform: scale(1.03);
+}
+
+/*media queries para facetas*/
+@media (max-width: 1200px) {
+#div-face {
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 25px;
+} 
+.fa-div {
+    width: 100%;           
+    max-width: 600px;      
+} 
+.facetas-content p {
+    font-size: 1.5rem;
+}
+}
+
+@media (max-width: 600px) {
+#facetas > h3 {
+    font-size: 2rem;
+    padding: 15px;
+}  
+.fa-div {
+    width: 100%;         
+    padding: 15px;         
+} 
+.facetas-content p {
+    font-size: 1.3rem;
+}
+.fa-div > a > img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+}
+
+/*estilos para musica*/
+#musica {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f3cd80be;
+    min-height: 80vh;
+    border: 5px solid #9e71161a; 
+    text-align: center;
+}
+#musica > h3 {
+    font-size: 2.5rem;
+    font-family: var(--font-1);
+    text-align: center;
+    color: #b67b05e0;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #f3cd80be;
+    border-radius: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#cont-mus {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    justify-content: space-around; 
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f3cd80be;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 1200px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+#cont-mus:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+#cont-skz, #cont-fuji {
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mu-div {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.mu-div img {
+    width: 100%;
+    border-radius: 20px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    transition: transform 0.3s;
+}
+.mu-div:hover img {
+    transform: scale(1.03);
+}
+audio {
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+audio::-webkit-media-controls-panel {
+    background-color: #f3cd80;
+    border-radius: 30px;
+}
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button {
+    background-color: #b67b05;
+    border-radius: 50%;
+}
+figcaption > h4 {
+    font-family: var(--font-1);
+    color: #b37700e0;
+    font-size: 1.8rem;
+    margin: 20px;
+    line-height: 1.4; 
+}
+figcaption > h5 {
+    font-family: var(--font-1);
+    color: #614205e0;
+    font-size: 1.6rem;
+    margin:10px;
+}
+
+/* media queries para responsive en musica */
+
+@media (max-width: 1000px) {
+#musica {
+    padding: 30px 15px;
+    min-height: auto;
+}    
+#musica > h3 {
+    font-size: 2.2rem;
+    padding: 15px;
+    margin-bottom: 30px;
+    max-width: 90%;
+}   
+#cont-mus {
+    gap: 30px;
+    padding: 20px;
+    margin: 30px auto;
+    width: 95%;
+}    
+#cont-skz, #cont-fuji {
+    min-width: 280px;
+    max-width: 350px;
+}    
+.mu-div img {
+    height: 250px;
+}    
+figcaption > h4 {
+    font-size: 1.6rem;
+    margin: 15px;
+}    
+figcaption > h5 {
+    font-size: 1.4rem;
+    margin: 8px;
+}
+}
+
+@media (max-width: 600px) {
+#musica {
+    padding: 20px 10px;
+    border-width: 3px;
+}    
+#musica > h3 {
+    font-size: 1.8rem;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}    
+#cont-mus {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+}    
+#cont-skz, #cont-fuji {
+    min-width: 100%;
+    max-width: 100%;
+}    
+.mu-div img {
+    height: 220px;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}    
+audio {
+    max-width: 300px;
+    margin: 0 auto;
+}   
+figcaption > h4 {
+    font-size: 1.4rem;
+    margin: 12px;
+}    
+figcaption > h5 {
+    font-size: 1.2rem;
+    margin: 6px;
+}
+}
+
+/* estilos para galeria*/
+#galeria{
+    padding: 2rem;
+    text-align: center;
+    background-color:#fcd9d9c4 ;
+}
+#galeria > h2{
+    font-size: 2.5rem;
+    font-family: var(--font-1);
+    text-align: center;
+    color: #f8adad;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #f8f8f8;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.galeria-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1/1;
+    transition: transform 0.3s;
+}
+.galeria-item:hover {
+    transform: scale(1.03);
+}
+.galeria-imagen{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*estilos para el footer*/
+
+footer {
+    background-color: var(--color-5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 100px;
+}
+#redes {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+#redes > h3 {
+    font-family: var(--font-1);
+    font-size: 1.8rem;
+    color: #8f003096;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#iconfoot {
+    display: flex;
+    gap: 20px;
+}
+#iconfoot > a {
+    text-decoration: none; 
+    color: #8f003096;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+#iconfoot > a:hover {
+    transform: translateY(-5px);
+    color: #8f0030;
+}
+#iconfoot > a > i {
+    font-size: 1.8rem;
+}
+#form-foot {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+#form-foot > h4 {
+    font-family: var(--font-1);
+    font-size: 1.5rem;
+    color: #8f003096;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    font-family: var(--font-1);
+    color: #8f003096;
+}
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.contact-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #8f0030;
+}
+.contact-form input {
+    padding: 12px;
+    border: 2px solid #8f003030;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-1);
+    font-size: 1rem;
+    color: #00000096;
+    transition: all 0.3s ease;
+}
+.contact-form input:focus {
+    outline: none;
+    border-color: #8f0030;
+    box-shadow: 0 0 0 3px rgba(143, 0, 48, 0.2);
+}
+.contact-form button {
+    font-size: 1rem;
+    font-family: var(--font-1);
+    color: white;
+    background: #8f0030;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(143, 0, 48, 0.4);
+    background: #6b0024;
+}
+#michi-button {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 200px;
+}
+#michi-button button {
+    padding: 14px 30px;
+    background: #8f0030;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+#michi-button button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: #6b0024;
+}
+#creditos {
+    font-family: var(--font-1);
+    font-size: 0.7rem;
+    text-align: center;
+    color: #8f0030b7;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/*media queries para responsive footer*/
+
+@media (max-width: 1000px) {
+
+footer {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}   
+#redes, #form-foot, #michi-button {
+    width: 100%;
+    max-width: 500px;
+}   
+#form-foot {
+    order: 1;
+}    
+#redes {
+    order: 2;
+}    
+#michi-button {
+    order: 3;
+    padding: 20px 0;
+    margin-bottom: 50px;
+}   
+#michi-button button {
+    width: 100%;
+    max-width: 300px;
+}
+}
+
+@media (max-width: 600px) {
+footer {
+    padding: 15px;
+    gap: 20px;
+}   
+#redes > h3 {
+    font-size: 1.5rem;
+}
+    
+#iconfoot > a > i {
+    font-size: 1.5rem;
+}   
+#form-foot {
+    padding: 15px;
+    min-width: auto;
+}    
+#form-foot > h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}   
+.contact-form {
+    gap: 10px;
+}   
+.contact-form input {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+    
+.contact-form button {
+    padding: 10px 15px;
+     font-size: 0.9rem;
+}   
+#michi-button button {
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+#creditos {
+    font-size: 0.6rem;
+    padding: 8px 15px;
+    max-width: 100%;
+}    
+footer {
+    padding-bottom: 30px;
+}
+}
