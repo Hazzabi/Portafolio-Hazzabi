@@ -71,6 +71,7 @@
     width: 40%;
     margin: 20px 80px;
     border-radius: 30px;
+    object-fit: cover;
 }
 #herotext{
     display: flex;
